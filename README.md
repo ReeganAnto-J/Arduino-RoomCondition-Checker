@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Arduino branch
+-This branch holds all the necessary files required to work the arduino device.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-All the .h files are the header files which contains the function declaration for all necessary functions.
 
-## Available Scripts
+-The other cpp and ino files will be explained below.
 
-In the project directory, you can run:
 
-### `npm start`
+### RoomConditionMain.ino
+-This is the main file of this project, this file contains the setup and root function to run the project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-This function sets up the LCD display and initializes the ESP8266EX module.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-This function periodically updates the display and the ThingSpeak server.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### DataHandler.ino 
+-This file is used to read data from all the external peripherals connected to the arduino device.
 
-### `npm run build`
+-The DHT11 is used to read the room's humidity and temperature while the LDR reads the light intensity.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-This is also responsible in calling the esp.ino's updateESP function which uploads data to the ThingSpeak channel using AT calls.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### esp.ino
+-This file contains functions which sets up and uploads data from the ESP8266EX Wifi module.
 
-### `npm run eject`
+-The setup function connects the module to the nearby wifi device using its SSID and password.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-The data will be transwerred to my ThingSpeak channel using AT calls which writes data by referring to the write API key.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Other CPP files
+-These are libraries provided by quad store from whom I bought all the hardwares used in the project.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-I used the libraries provided by them in order to prevent any compatability issues.
