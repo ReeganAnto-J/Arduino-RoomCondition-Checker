@@ -4,23 +4,18 @@ IoT Project by: Reegan Anto.J
 Webdev and Deployment: Dinesh.J
 
 
-## Introduction:
-This is an IoT based electrical circuit using Arduino UNO board which reads data from DHT11 sensor and photoresistor in order to obtain temperature, humidity and photoresistor and I use the ESP8266EX wifi module to update the data to my ThingSpeak channel whose API key is then read and visualized by the frontend deployed on vercel.
-
-
-## Circuit diagram
-![RoomCondition-Circuit](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/e5d7ceff-80f5-42bd-93dd-a6718f2ae138)
-
-## Deployed site
-Deployed Site: https://arduino-room-condition-checker.vercel.app/
-
-ThingSpeak: https://thingspeak.com/channels/2566898
-
-![Room_Condition_Deployed](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/6dccd1e7-c767-45ec-8a01-92cb47c7db72)
-
-
 ## IoT Details:
 The Arduino files can be accessed in the arduino branch.
+
+### Introduction:
+This is an IoT based electrical circuit using Arduino UNO board which reads data from DHT11 sensor and photoresistor in order to obtain temperature, humidity and photoresistor and I use the ESP8266EX wifi module to update the data to my ThingSpeak channel.
+
+### Circuit diagram:
+![RoomCondition-Circuit](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/e5d7ceff-80f5-42bd-93dd-a6718f2ae138)
+
+### ThingSpeak:
+ThingSpeak: https://thingspeak.com/channels/2566898
+![RoomCondition-Thingspeak](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/da57718b-d91d-4086-a783-eec54f763c44)
 
 ### Components:
   - Arduino UNO board
@@ -30,28 +25,31 @@ The Arduino files can be accessed in the arduino branch.
 
 Youtube Explanation: (https://youtu.be/VlIczb6ad0c "Room Condition Checker")
 
-#### WEB DETAILS:
+## WEB DETAILS:
 
-## FRAMEWORK: 
+### Deployment Preview:
+![Room_Condition_Deployed](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/6dccd1e7-c767-45ec-8a01-92cb47c7db72)
+
+### FRAMEWORK: 
     --REACT js
     A React application to monitor room conditions including temperature, humidity, and light intensity using data fetched from a ThingSpeak channel.
-## Introduction:
+### Introduction:
 
 This project is a room condition checker that fetches data from the ThingSpeak API and displays it in a web application using REACT js. The application shows real-time data for temperature, humidity, and light intensity.
 
-##  Technology Used:
+###  Technology Used:
   --React    - Used for building user interfaces.
   --chart.js  -Used for data visualization.
   --Axios    - Used this  package to fetch the data  in JSON format using API.
 
-## Fetching Data with Axios
+### Fetching Data with Axios:
     API :   https://thingspeak.com/channels/2566898/feeds.json
     Process: The application fetches data from the ThingSpeak API. This API eturns a JSON object containing the latest data for temperature, humidity, and light intensity.
     
-## Displaying Fetched Data
+### Displaying Fetched Data:
 
 The application fetches temperature, humidity, and light intensity data from the ThingSpeak API using Axios. This data is then displayed on a line chart using the Chart.js library. Each data point is mapped to its corresponding timestamp and visualized on the chart. The chart has multiple Y-axes to represent each parameter clearly. This provides a real-time visualization of room conditions.
-## Components in `src`
+### Components in `src`:
 
 The `src` directory contains the core components of the application, each serving a specific purpose in rendering the dashboard and fetching data. Here's an overview of the key components:
     
@@ -77,7 +75,7 @@ The `src` directory contains the core components of the application, each servin
 
 
 
-## Dependencies
+### Dependencies:
 
 The project relies on several npm packages listed in the `package.json` file:
 
@@ -90,14 +88,10 @@ The project relies on several npm packages listed in the `package.json` file:
 
 These dependencies are crucial for the functionality of the application, enabling efficient data fetching, UI rendering, and data visualization.
 
-### Deployment
-PLatform : Vercel
+### Deployment:
+Platform : Vercel
 About:  This project is deployed using Vercel, which provides a seamless way to deploy and manage React applications. Vercel's continuous deployment allows for automatic updates every time changes are pushed to the repository.
 Deployment Link :https://arduino-room-condition-checker.vercel.app/
 
-
-
-
-  
 
 Feel free to apply this in any of your own Arduino projects and React Applications.
