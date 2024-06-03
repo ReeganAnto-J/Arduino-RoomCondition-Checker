@@ -1,7 +1,7 @@
 # Room Condition Checker
 IoT Project by: Reegan Anto.J
 
-Webdev and Deployment: Dinesh
+Webdev and Deployment: Dinesh.J
 
 ## Introduction:
 This is an IoT based electrical circuit using Arduino UNO board which reads data from DHT11 sensor and photoresistor in order to obtain temperature, humidity and photoresistor and I use the ESP8266EX wifi module to update the data to my ThingSpeak channel whose API key is then read and visualized by the frontend deployed on vercel.
