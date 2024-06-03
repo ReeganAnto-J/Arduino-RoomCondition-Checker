@@ -23,7 +23,7 @@ const SensorDashboard = () => {
 
   return (
     <div>
-      <h1>Arduino Room Condition Checker hello</h1>
+      <h1>Arduino Room Condition Checker</h1>
       <Chart data={data} />
     </div>
   );
