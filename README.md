@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Room Condition Checker
+IoT Project by: Reegan Anto.J
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Webdev and Deployment: Dinesh
 
-## Available Scripts
+## Introduction:
+This is an IoT based electrical circuit using Arduino UNO board which reads data from DHT11 sensor and photoresistor in order to obtain temperature, humidity and photoresistor and I use the ESP8266EX wifi module to update the data to my ThingSpeak channel whose API key is then read and visualized by the frontend deployed on vercel.
 
-In the project directory, you can run:
+## Circuit diagram
+![RoomCondition-Circuit](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/e5d7ceff-80f5-42bd-93dd-a6718f2ae138)
 
-### `npm start`
+## Deployed site
+Deployed Site: https://arduino-room-condition-checker.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ThingSpeak: https://thingspeak.com/channels/2566898
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Room_Condition_Deployed](https://github.com/ReeganAnto-J/Arduino-RoomCondition-Checker/assets/140252295/6dccd1e7-c767-45ec-8a01-92cb47c7db72)
 
-### `npm test`
+## IoT Details:
+The Arduino files can be accessed in the arduino branch.
+### Components:
+  - Arduino UNO board
+  - DHT11 Sensor
+  - Light Dependent Resistor
+  - ESP8266EX Wifi Module
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Web Details:
+// Enter the web development details here (delete this section if nothing to add)
 
-### `npm run build`
+Youtube Explanation: (https://youtu.be/VlIczb6ad0c "Room Condition Checker")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to apply this in any of your own Arduino projects.
